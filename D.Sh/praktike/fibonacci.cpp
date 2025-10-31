@@ -11,7 +11,7 @@ int main() {
     cout << "Fibonacci sequence: ";
 
     for (int i = 0; i < n; i++) {
-        cout << a << " ";
+        cout << a << endl;
         int c = a + b;
         a = b;
         b = c;
