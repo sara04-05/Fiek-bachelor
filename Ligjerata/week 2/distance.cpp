@@ -5,7 +5,6 @@
 using namespace std;
 
 int main(){
-
     int x1, y1, x2, y2;
     float distancaEuklidiane, distancaMenhatane;
 
@@ -24,6 +23,5 @@ int main(){
     distancaMenhatane= abs(x2 - x1) + abs(y2 - y1);
     cout << "Distanca Menhatane mes dy pikave eshte: " << distancaMenhatane << endl;
 
-
-return 0;   
+    return 0;
 }
