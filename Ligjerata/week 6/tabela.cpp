@@ -14,6 +14,7 @@ int main()
         y = exp(-x);
         cout << "| " << setprecision(1) << fixed << x
              << "  |   " << setprecision(4) << fixed << y << "   |\n";
+             //setprecision e percakton numrin e shifrave pas presjes dhjetore, fixed ben qe te shfaqen gjithmone shifrat pas presjes dhjetore
     }
     cout << "-------------------\n";
     return 0;

@@ -14,8 +14,8 @@ using namespace std;
 int main(){
 
     const int numrat=200;
-     
-
+    int 
+    
 
     return 0;
 }
