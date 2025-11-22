@@ -33,6 +33,10 @@ int main() {
 
     // d. Tregimi i numrit të numrave tek
     cout << "Numri i numrave tek te lexuar: " << tekCount << endl;
-
+    cout<<"Numrat e ruajtur ne varg jane:";
+    for (int i = 0; i < size; i++) {
+        cout << numrat[i] << " ";
+    }
+    cout << endl;
     return 0;
 }
