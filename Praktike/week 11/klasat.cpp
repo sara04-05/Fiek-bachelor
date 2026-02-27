@@ -16,9 +16,9 @@ class PointClass{
 
     public:
 
-        // PointClass(){
-        //     cout<<"U krijua nje pike";
-        // }
+        PointClass(){
+            cout<<"U krijua nje pike";
+        }
 
     PointClass(int _x, int _y){
             cout<<"U krijua nje pike me parametra";
