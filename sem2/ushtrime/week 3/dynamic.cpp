@@ -32,10 +32,10 @@ int main(){
     int array[4] = {1,2,3,4};
 
     cout << "Vargu eshte:" << array <<endl;
-    cout << "Adresa e antarit te pare eshte:" << &array[0] <<endl;
+    // cout << "Adresa e antarit te pare eshte:" << &array[0] <<endl;
 
     cout << "Antari i pare eshte " << array[0] <<endl;
-    cout << "Antari i pare eshte " << *(array + 0 ) <<endl;
+    // cout << "Antari i pare eshte " << *(array + 0 ) <<endl;
 
    int *array2 = new int[n];
 
