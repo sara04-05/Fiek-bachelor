@@ -96,9 +96,7 @@ class ElevUraDashboard {
     this.setupNotificationPulse();
   }
 
-  /**
-   * Create ripple effect on click
-   */
+ 
   createRipple(element, event) {
     const ripple = document.createElement('span');
     const rect = element.getBoundingClientRect();

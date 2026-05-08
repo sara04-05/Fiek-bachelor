@@ -51,27 +51,29 @@ body {
 }
 
 /* Background Pattern - Volumetric Wireframe Grid */
-/* Cube Background Pattern */
+
 body::before {
     content: '';
     position: fixed;
     inset: 0;
 
-    background-image: url('your-image.png');
+    background-image: url('images/bg.png');
     background-repeat: repeat;
 
-    /* smaller cubes */
-    background-size: 120px 120px;
+    /* SMALLER cubes */
+    background-size: 80px 80px;
 
-    opacity: 0.22;
+    /* visibility */
+    opacity: 0.45;
 
     pointer-events: none;
     z-index: 0;
 
-    /* makes it blend into matte black */
     filter:
-        brightness(0.8)
-        contrast(1.2);
+        brightness(1.2)
+        contrast(1.4);
+
+    mix-blend-mode: screen;
 }
 /* Ambient Glow Overlay */
 body::after {
@@ -104,7 +106,7 @@ body::after {
 }
         .container-wrapper {
             position: relative;
-            z-index: 2;
+            z-index: 1;
             display: flex;
             min-height: 100vh;
         }
@@ -435,7 +437,7 @@ body::after {
             flex: 1;
             overflow-y: auto;
             position: relative;
-            z-index: 2;
+            z-index: 1;
         }
 
         /* ==================== HERO SECTION ==================== */
@@ -1230,7 +1232,9 @@ body::after {
         </aside>
 
         <!-- MAIN CONTENT -->
-        <main class="main-content">
+        <main class="main-content" style="background-image: url('images/bg.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    
+</section>
             <!-- TOP HEADER -->
             <header class="top-header">
                 <div class="header-left">
@@ -1257,7 +1261,7 @@ body::after {
             </header>
 
             <!-- CONTENT AREA -->
-            <section class="content-area">
+            <section class="content-area";>
                 <!-- HERO PANEL -->
                 <div class="hero-panel">
                     <div class="hero-left">
