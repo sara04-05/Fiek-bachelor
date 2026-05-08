@@ -41,97 +41,70 @@
         html {
             scroll-behavior: smooth;
         }
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+}
 
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background-color: var(--bg-base);
-            color: var(--text-primary);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+/* Background Pattern - Volumetric Wireframe Grid */
+/* Cube Background Pattern */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
 
-        /* Background Pattern - Volumetric Wireframe Grid */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                /* Vertical lines */
-                repeating-linear-gradient(
-                    90deg,
-                    transparent,
-                    transparent 79px,
-                    rgba(0, 229, 255, 0.12) 79px,
-                    rgba(0, 229, 255, 0.12) 81px
-                ),
-                /* Horizontal lines */
-                repeating-linear-gradient(
-                    0deg,
-                    transparent,
-                    transparent 79px,
-                    rgba(0, 229, 255, 0.12) 79px,
-                    rgba(0, 229, 255, 0.12) 81px
-                ),
-                /* Diagonal lines (isometric) */
-                repeating-linear-gradient(
-                    45deg,
-                    transparent,
-                    transparent 111px,
-                    rgba(0, 229, 255, 0.08) 111px,
-                    rgba(0, 229, 255, 0.08) 112px
-                ),
-                repeating-linear-gradient(
-                    -45deg,
-                    transparent,
-                    transparent 111px,
-                    rgba(0, 229, 255, 0.08) 111px,
-                    rgba(0, 229, 255, 0.08) 112px
-                );
-            background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%;
-            opacity: 0.6;
-            pointer-events: none;
-            z-index: 0;
-            filter: blur(0.5px);
-        }
+    background-image: url('your-image.png');
+    background-repeat: repeat;
 
-        /* Volumetric ambient lighting overlay */
-        body::after {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                /* Cyan bloom behind hero area */
-                radial-gradient(
-                    ellipse 1200px 800px at 50% 20%,
-                    rgba(0, 229, 255, 0.15) 0%,
-                    rgba(0, 229, 255, 0.05) 30%,
-                    transparent 70%
-                ),
-                /* Vignette darkness */
-                radial-gradient(
-                    ellipse at 50% 50%,
-                    transparent 30%,
-                    rgba(5, 6, 7, 0.4) 100%
-                ),
-                /* Top-center illumination haze */
-                radial-gradient(
-                    ellipse 800px 400px at 50% 0%,
-                    rgba(0, 229, 255, 0.08) 0%,
-                    transparent 60%
-                );
-            pointer-events: none;
-            z-index: 1;
-        }
+    /* smaller cubes */
+    background-size: 120px 120px;
 
+    opacity: 0.22;
+
+    pointer-events: none;
+    z-index: 0;
+
+    /* makes it blend into matte black */
+    filter:
+        brightness(0.8)
+        contrast(1.2);
+}
+/* Ambient Glow Overlay */
+body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            ellipse 1200px 800px at 50% 20%,
+            rgba(0, 229, 255, 0.15) 0%,
+            rgba(0, 229, 255, 0.05) 30%,
+            transparent 70%
+        ),
+
+        radial-gradient(
+            ellipse at 50% 50%,
+            transparent 30%,
+            rgba(5, 6, 7, 0.4) 100%
+        ),
+
+        radial-gradient(
+            ellipse 800px 400px at 50% 0%,
+            rgba(0, 229, 255, 0.08) 0%,
+            transparent 60%
+        );
+
+    pointer-events: none;
+    z-index: 1;
+}
         .container-wrapper {
             position: relative;
-            z-index: 1;
+            z-index: 2;
             display: flex;
             min-height: 100vh;
         }
@@ -1218,7 +1191,7 @@
         }
     </style>
 </head>
-<body>
+<body >
     <div class="container-wrapper">
         <!-- SIDEBAR -->
         <aside class="sidebar">
